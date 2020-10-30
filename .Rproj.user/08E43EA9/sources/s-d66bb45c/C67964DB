@@ -1,0 +1,26 @@
+{
+    "id": "C67964DB",
+    "path": "/cloud/project/notes.Rmd",
+    "project_path": "notes.Rmd",
+    "type": "r_markdown",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1602893869406.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "tempName": "Untitled1",
+        "chunk_output_type": "inline",
+        "cursorPosition": "46,0",
+        "scrollLine": "26"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1603484978,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1603484978568,
+    "read_only": false,
+    "read_only_alternatives": []
+}

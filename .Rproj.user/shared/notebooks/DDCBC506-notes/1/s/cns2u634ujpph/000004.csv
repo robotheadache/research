@@ -1,0 +1,5 @@
+"0","logomaker(aligned_petases, type = ""Logo"")"
+"2","Error in logomaker(aligned_petases, type = ""Logo"") : 
+  if not a character sequence, data must be either a matrix 
+            or a data frame
+"

@@ -1,0 +1,48 @@
+---
+title: "R Notebook"
+output:
+  html_document:
+    df_print: paged
+---
+
+<style>
+  .fulllogo{
+      overflow-x:scroll;
+      white-space: nowrap;
+  }
+
+  .fulllogo img{
+     max-width: none;
+  }
+
+
+</style>
+```{r load-packages, message=FALSE}
+library(tidyverse)
+library(Biostrings)
+library(DECIPHER)
+library(ggseqlogo)
+library(htmltools)
+library(plotly)
+```
+
+```{r generate info, message=FALSE}
+petases <- readAAStringSet("seqdump.txt")
+petases <- AAStringSet(petases)
+aligned_petases <- AlignSeqs(petases)
+BrowseSeqs(aligned_petases, htmlFile = "output.html", openURL = FALSE)
+htmltools::includeHTML("output.html")
+```
+
+<div class="fulllogo">
+```{r plotly}
+ggplotly(ggseqlogo(as.character(aligned_petases)), width = 5000)
+```
+</div>
+
+```{r aa-content}
+petases %>%
+  alphabetFrequency() %>%
+  mutate(hydrophobic = A + I + L + M + V)
+```
+
