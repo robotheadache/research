@@ -41,8 +41,13 @@ ggplotly(ggseqlogo(as.character(aligned_petases)), width = 5000)
 </div>
 
 ```{r aa-content}
-petases %>%
+calculated_petases <- petases %>%
   alphabetFrequency() %>%
-  mutate(hydrophobic = A + I + L + M + V)
+  as.data.frame() %>%
+  mutate(Hydrophobic = A + I + L + M + V + F + Y + W,
+         Hydrophillic = K + R + H + D + E + S + T + N + Q) 
+
+
 ```
 
+https://sites.google.com/site/mitsectionm/subjects/biology/aminoacids-chart
