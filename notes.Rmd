@@ -47,7 +47,6 @@ calculated_petases <- petases %>%
   mutate(Hydrophobic = A + I + L + M + V + F + Y + W,
          Hydrophillic = K + R + H + D + E + S + T + N + Q) 
 
-
 ```
 
 https://sites.google.com/site/mitsectionm/subjects/biology/aminoacids-chart
